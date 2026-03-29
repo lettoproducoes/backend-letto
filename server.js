@@ -13,7 +13,7 @@ mercadopago.configure({
 
 app.post("/criar-pagamento", async (req, res) => {
   try {
-    const { total, descricao } = req.body;
+    const { total, descricao, video_id } = req.body;
 
     const preference = {
       items: [
