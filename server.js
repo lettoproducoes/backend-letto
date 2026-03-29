@@ -23,7 +23,9 @@ app.post("/criar-pagamento", async (req, res) => {
           currency_id: "BRL",
           unit_price: Number(total)
         }
-      ]
+      ],
+      // ID do vídeo para rastrear vendas
+      external_reference: video_id,      
     };
 
     const response = await mercadopago.preferences.create(preference);
