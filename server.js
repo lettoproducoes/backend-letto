@@ -25,7 +25,7 @@ app.post("/criar-pagamento", async (req, res) => {
         }
       ],
       // ID do vídeo para rastrear vendas
-      external_reference: video_id,      
+      external_reference: video_id
     };
 
     const response = await mercadopago.preferences.create(preference);
